@@ -24,7 +24,7 @@ export function Hero() {
         <h1 className="max-w-3xl font-display text-5xl leading-[1.05] text-cream sm:text-6xl md:text-7xl">
           SHALUC
           <span className="block text-2xl font-normal italic text-cream/80 sm:text-3xl md:text-4xl mt-2">
-            Taste of India
+            {restaurant.tagline}
           </span>
         </h1>
         <p className="mt-6 max-w-md text-lg text-cream/85">

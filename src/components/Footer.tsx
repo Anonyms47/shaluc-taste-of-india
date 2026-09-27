@@ -15,7 +15,7 @@ export function Footer() {
         <div className="flex flex-col gap-12 md:flex-row md:justify-between">
           <div>
             <p className="font-display text-2xl">SHALUC</p>
-            <p className="mt-1 text-sm italic text-ink/50">Taste of India — Dakar</p>
+            <p className="mt-1 text-sm italic text-ink/50">{restaurant.tagline} — Dakar</p>
             <div className="mt-6 flex flex-wrap gap-4">
               <a href={telUrl} className="text-sm font-semibold text-ember hover:underline">
                 {restaurant.phoneDisplay}
@@ -46,7 +46,7 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col-reverse gap-4 border-t border-ink/10 pt-6 text-xs text-ink/40 md:flex-row md:items-center md:justify-between">
-          <p>© {new Date().getFullYear()} SHALUC — Taste of India.</p>
+          <p>© {new Date().getFullYear()} SHALUC — {restaurant.tagline}.</p>
           <p>{restaurant.rating}/5 sur {restaurant.reviewCount} avis Google.</p>
         </div>
       </div>

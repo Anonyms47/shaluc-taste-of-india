@@ -1,4 +1,4 @@
-# SHALUC — Taste of India
+# SHALUC — Flavour of Asia
 
 Site vitrine du restaurant indien SHALUC à Dakar. Next.js (App Router) + TypeScript + Tailwind CSS v4.
 
@@ -41,11 +41,12 @@ texture de marque placeholder. Pour ajouter d'autres photos officielles (menu,
 plats identifiés, équipe), déposez-les dans `public/photos/` et référencez-les de
 la même façon.
 
-⚠️ **Point à vérifier avec le restaurant** : le logo réel photographié sur place
-(`public/photos/logo-source.jpg`) affiche **"Shaluc — Flavour of Asia"** avec un
-pictogramme d'éléphant, ce qui diffère du nom "Taste of India" utilisé sur la
-fiche Google Maps et donc sur tout le site actuel. À confirmer avant mise en ligne :
-lequel des deux est le nom/la accroche officiels à utiliser.
+✅ **Nom de marque tranché** : le logo réel photographié sur place
+(`public/photos/logo-source.jpg`) affiche "Shaluc — Flavour of Asia" avec un
+pictogramme d'éléphant. C'est différent du nom "Taste of India" utilisé sur la
+fiche Google Maps — le client a confirmé que "Flavour of Asia" est le nom
+officiel à utiliser ; tout le site a été mis à jour en conséquence
+(`restaurant.tagline` dans `src/lib/restaurant.ts`).
 
 ## Structure
 

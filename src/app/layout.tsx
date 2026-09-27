@@ -23,8 +23,8 @@ const siteUrl = "https://www.shaluc-dakar.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "SHALUC — Taste of India | Restaurant indien à Dakar",
-    template: "%s | SHALUC — Taste of India",
+    default: "SHALUC — Flavour of Asia | Restaurant indien à Dakar",
+    template: "%s | SHALUC — Flavour of Asia",
   },
   description:
     "SHALUC, restaurant indien moderne à Dakar. Cuisine indienne authentique au four tandoor, butter chicken, biryani. Note 4,9/5 sur 406 avis.",
@@ -34,20 +34,20 @@ export const metadata: Metadata = {
     "Indian restaurant Dakar",
     "Indian food Dakar",
     "SHALUC Dakar",
-    "SHALUC Taste of India",
+    "SHALUC Flavour of Asia",
   ],
   openGraph: {
-    title: "SHALUC — Taste of India",
+    title: "SHALUC — Flavour of Asia",
     description:
       "Restaurant indien moderne à Dakar. Épices, feu du tandoor, et l'art du partage.",
     url: siteUrl,
-    siteName: "SHALUC — Taste of India",
+    siteName: "SHALUC — Flavour of Asia",
     locale: "fr_SN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SHALUC — Taste of India",
+    title: "SHALUC — Flavour of Asia",
     description: "Restaurant indien moderne à Dakar.",
   },
   alternates: {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
-  name: "SHALUC — Taste of India",
+  name: "SHALUC — Flavour of Asia",
   servesCuisine: "Indian",
   telephone: restaurant.phone,
   priceRange: `${restaurant.priceRange.min}-${restaurant.priceRange.max} ${restaurant.priceRange.currency}`,

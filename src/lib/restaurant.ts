@@ -1,10 +1,11 @@
-// Données confirmées SHALUC — Taste of India (source : fiche Google Maps du restaurant).
+// Données confirmées SHALUC — Flavour of Asia (source : fiche Google Maps du
+// restaurant, et logo réel photographié en salle — voir public/photos/logo-source.jpg).
 // Règle du projet : ne jamais inventer un fait manquant. Les champs `null` ou vides
 // sont volontairement laissés ainsi et doivent être complétés avec de vraies informations.
 
 export const restaurant = {
   name: "SHALUC",
-  tagline: "Taste of India",
+  tagline: "Flavour of Asia",
   category: "Restaurant indien moderne",
   rating: 4.9,
   reviewCount: 406,
@@ -67,7 +68,7 @@ export const restaurant = {
 
 // Photos réelles du restaurant, récupérées depuis la catégorie
 // "Photos du propriétaire" de sa fiche Google Maps (contenu publié par le
-// compte SHALUC Taste of India lui-même).
+// compte SHALUC Flavour of Asia lui-même).
 export const photos = {
   salleSoir: "/photos/salle-soir.jpg",
   salleJour: "/photos/salle-jour.jpg",

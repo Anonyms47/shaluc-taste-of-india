@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { Baloo_2, Manrope } from "next/font/google";
 import "./globals.css";
 import { restaurant } from "@/lib/restaurant";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+// Baloo 2 : la même famille de rondes épaisses que le lettrage "Shaluc"
+// du vrai logo du restaurant (voir public/brand/elephant-motif.png et le
+// wordmark sur public/photos/logo-source.jpg).
+const baloo = Baloo_2({
+  variable: "--font-baloo",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -81,7 +83,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${fraunces.variable} ${manrope.variable} antialiased`}>
+      <body className={`${baloo.variable} ${manrope.variable} antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

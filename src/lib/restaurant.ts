@@ -60,7 +60,7 @@ export const restaurant = {
     },
   ],
   whatsapp: null as string | null,
-  instagram: null as string | null,
+  instagram: "shalucdakar",
   website: null as string | null,
   founderStory: null as string | null,
   logo: null as string | null,
@@ -78,6 +78,12 @@ export const photos = {
   lumiereSoir: "/photos/lumiere-soir.jpg",
   assiette1: "/photos/assiette-1.jpg",
   assiette2: "/photos/assiette-2.jpg",
+  butterChicken: "/photos/dish-butter-chicken.jpg",
+  tandooriNaan: "/photos/dish-tandoori-naan.jpg",
+  samosa: "/photos/dish-samosa.jpg",
+  drumsOfHeaven: "/photos/dish-drums-of-heaven.jpg",
+  mojitoBissap: "/photos/dish-mojito-bissap.jpg",
+  mixedVegCurry: "/photos/dish-mixed-veg-curry.jpg",
 } as const;
 
 export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -85,3 +91,4 @@ export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encode
 )}`;
 
 export const telUrl = `tel:${restaurant.phone}`;
+export const instagramUrl = `https://www.instagram.com/${restaurant.instagram}`;

@@ -1,4 +1,4 @@
-import { restaurant, telUrl, mapsUrl } from "@/lib/restaurant";
+import { restaurant, telUrl, mapsUrl, instagramUrl } from "@/lib/restaurant";
 
 const NAV = [
   { href: "#accueil", label: "Accueil" },
@@ -27,6 +27,14 @@ export function Footer() {
                 className="text-sm font-semibold text-ember hover:underline"
               >
                 Itinéraire
+              </a>
+              <a
+                href={instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-semibold text-ember hover:underline"
+              >
+                @{restaurant.instagram}
               </a>
             </div>
           </div>

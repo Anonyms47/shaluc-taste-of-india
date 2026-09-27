@@ -1,7 +1,12 @@
 import { restaurant, photos } from "@/lib/restaurant";
 import { PhotoSlot } from "../ui/PhotoSlot";
 
-const dishPhotos = [photos.assiette1, photos.assiette2];
+const signatureDishes = [
+  { name: "Butter Chicken", price: 8000, src: photos.butterChicken },
+  { name: "Tandoori Chicken with Naan Bread", price: 7000, src: photos.tandooriNaan },
+  { name: "Samosa", price: 5000, src: photos.samosa },
+  { name: "Drums of Heaven", price: 6000, src: photos.drumsOfHeaven },
+];
 
 export function Cuisine() {
   return (
@@ -20,19 +25,19 @@ export function Cuisine() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2">
-          {restaurant.popularDishes.map((dish, i) => (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {signatureDishes.map((dish) => (
             <article key={dish.name} className="group">
               <PhotoSlot
                 label={dish.name}
-                src={dishPhotos[i]}
-                aspect="aspect-[5/4]"
-                alt="Plat servi chez SHALUC"
+                src={dish.src}
+                aspect="aspect-[4/5]"
+                alt={`${dish.name} — SHALUC`}
               />
-              <div className="mt-4 flex items-start justify-between gap-4">
-                <h3 className="font-display text-2xl">{dish.name}</h3>
-                <span className="mt-1 shrink-0 rounded-full bg-ember/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-ember-soft">
-                  {dish.tag}
+              <div className="mt-4 flex items-start justify-between gap-3">
+                <h3 className="font-display text-lg leading-snug">{dish.name}</h3>
+                <span className="mt-1 shrink-0 text-sm text-saffron">
+                  {dish.price.toLocaleString("fr-FR")}
                 </span>
               </div>
             </article>

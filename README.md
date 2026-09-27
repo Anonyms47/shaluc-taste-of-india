@@ -15,25 +15,46 @@ Toutes les informations affichées viennent de la fiche Google Maps du restauran
 (`src/lib/restaurant.ts`). Ce fichier est la seule source de vérité pour le contenu factuel :
 aucune histoire, date de création ou plat n'a été inventé.
 
-**Champs à compléter dès que l'information existe** (actuellement `null` ou vides dans
+**Champs à compléter dès que l'information existe** (actuellement `null` dans
 `src/lib/restaurant.ts`) :
 
 - `whatsapp` — numéro WhatsApp
-- `instagram` — lien Instagram
 - `address.full` — adresse rue précise (seul le plus code Google est connu)
 - `hours` — horaires complets 7j/7 (seule l'heure de fermeture est connue)
 - `founderStory` — histoire, fondateur, chef
-- Menu complet structuré (catégories, plats, prix)
+
+## Menu
+
+Le menu complet (79 plats, 15 catégories, prix en F CFA) est dans `src/lib/menu.ts`.
+Source : photos haute résolution de la carte officielle imprimée (logo éléphant),
+récupérées depuis la catégorie "Menu" de la fiche Google Maps. Deux autres versions
+de menu trouvées sur la même fiche (feuilles imprimées simples, prix différents)
+ont été volontairement ignorées car elles semblent obsolètes et contredisent la
+carte actuelle — à vérifier avec le restaurant si des écarts de prix sont signalés.
+
+Le composant `Menu.tsx` affiche les catégories sous forme d'onglets, comme sur la
+fiche Google Maps originale.
 
 ## Photos
 
-8 photos réelles ont été récupérées depuis la catégorie **"Photos du propriétaire"**
-de la fiche Google Maps de SHALUC (contenu publié par le compte du restaurant
-lui-même — choix délibéré pour éviter de réutiliser des photos de clients/Local
-Guides sans autorisation claire). Elles sont dans `public/photos/` et référencées
-dans `src/lib/restaurant.ts` (export `photos`).
+14 photos réelles au total dans `public/photos/`, référencées dans
+`src/lib/restaurant.ts` (export `photos`) :
+
+- 8 photos de lieu/ambiance depuis la catégorie **"Photos du propriétaire"** de la
+  fiche Google Maps (contenu publié par le compte du restaurant lui-même — choix
+  délibéré pour éviter de réutiliser des photos de clients/Local Guides sans
+  autorisation claire).
+- 6 photos de plats identifiées nommément sur la fiche Google Maps
+  (`dish-*.jpg` : Butter Chicken, Tandoori Chicken with Naan Bread, Samosa,
+  Drums of Heaven, Mojito Bissap, Mixed Vegetable Curry), utilisées dans la
+  section Cuisine.
 
 Une photo montrant des enfants clients a été écartée par respect de leur vie privée.
+
+Le motif graphique signature du site (`public/brand/elephant-motif.png`) est
+l'éléphant du vrai logo SHALUC, détouré depuis la photo du logo en salle et
+réutilisé en filigrane (classe CSS `.elephant-watermark`) — comme sur la carte
+du restaurant elle-même.
 
 `PhotoSlot` (`src/components/ui/PhotoSlot.tsx`) accepte un prop `src` optionnel :
 avec `src`, il affiche la vraie photo (via `next/image`) ; sans, il retombe sur la
@@ -47,6 +68,18 @@ pictogramme d'éléphant. C'est différent du nom "Taste of India" utilisé sur 
 fiche Google Maps — le client a confirmé que "Flavour of Asia" est le nom
 officiel à utiliser ; tout le site a été mis à jour en conséquence
 (`restaurant.tagline` dans `src/lib/restaurant.ts`).
+
+## Direction artistique
+
+Police d'affichage et palette ajustées pour coller à la vraie identité visuelle
+de SHALUC (carte imprimée + logo) plutôt qu'à un choix arbitraire :
+
+- Police : **Baloo 2** (ronde, épaisse) — proche du lettrage "Shaluc" du vrai logo.
+- Couleurs : brun-noir + orange, calées sur les tons du menu officiel
+  (`src/app/globals.css`, tokens `--color-ink` / `--color-ember` / `--color-saffron`).
+
+Le compte Instagram `@shalucdakar` est confirmé (QR code + mention sur la carte
+officielle) et utilisé dans le header/footer/section contact.
 
 ## Structure
 

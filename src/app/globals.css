@@ -1,13 +1,16 @@
 @import "tailwindcss";
 
+/* Palette calée sur la vraie charte SHALUC (menu officiel et logo réels :
+   fond brun-noir, lettrage crème, accent orange — voir public/photos/menu et
+   public/brand/elephant-motif.png). */
 :root {
-  --color-ink: #1c1410;
-  --color-ink-soft: #2a1f18;
+  --color-ink: #241d18;
+  --color-ink-soft: #322721;
   --color-cream: #f4ecdd;
   --color-cream-soft: #ebe0cb;
-  --color-ember: #b5502e;
-  --color-ember-soft: #c96a45;
-  --color-saffron: #d99a34;
+  --color-ember: #c2632b;
+  --color-ember-soft: #d47f4a;
+  --color-saffron: #e9983c;
   --color-copper: #a8763b;
   --grain-opacity: 0.05;
 }
@@ -21,7 +24,7 @@
   --color-ember-soft: var(--color-ember-soft);
   --color-saffron: var(--color-saffron);
   --color-copper: var(--color-copper);
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-baloo);
   --font-body: var(--font-manrope);
 }
 
@@ -88,6 +91,22 @@ h1, h2, h3, h4 {
 
 .photo-slot-alt {
   background: linear-gradient(145deg, var(--color-copper), var(--color-ink-soft) 70%);
+}
+
+/* Motif signature : l'éléphant du vrai logo SHALUC, utilisé comme filigrane */
+.elephant-watermark {
+  position: absolute;
+  pointer-events: none;
+  background-image: url("/brand/elephant-motif.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.06;
+}
+
+/* Variante pour fonds clairs : le motif (blanc) est inversé en encre foncée */
+.elephant-watermark-dark {
+  filter: invert(1);
+  opacity: 0.05;
 }
 
 .container-shaluc {

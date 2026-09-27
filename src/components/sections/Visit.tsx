@@ -1,9 +1,10 @@
-import { restaurant, telUrl, mapsUrl } from "@/lib/restaurant";
+import { restaurant, telUrl, mapsUrl, instagramUrl } from "@/lib/restaurant";
 
 export function Visit() {
   return (
-    <section id="contact" className="bg-ink py-24 md:py-32 text-cream">
-      <div className="container-shaluc grid gap-12 md:grid-cols-2 md:gap-20">
+    <section id="contact" className="relative overflow-hidden bg-ink py-24 md:py-32 text-cream">
+      <div className="elephant-watermark -left-20 -bottom-10 h-80 w-[28rem]" aria-hidden="true" />
+      <div className="container-shaluc relative grid gap-12 md:grid-cols-2 md:gap-20">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-saffron">Venir chez SHALUC</p>
           <h2 className="mt-4 font-display text-4xl md:text-5xl">On vous garde une table.</h2>
@@ -25,6 +26,14 @@ export function Visit() {
               className="rounded-full border border-cream/50 px-7 py-3.5 text-sm font-semibold transition-colors hover:bg-cream hover:text-ink"
             >
               Itinéraire
+            </a>
+            <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-cream/50 px-7 py-3.5 text-sm font-semibold transition-colors hover:bg-cream hover:text-ink"
+            >
+              Instagram
             </a>
           </div>
         </div>

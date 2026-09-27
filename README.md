@@ -27,12 +27,25 @@ aucune histoire, date de création ou plat n'a été inventé.
 
 ## Photos
 
-Aucune photo réelle n'a été fournie. Les zones photo utilisent un composant
-`PhotoSlot` (`src/components/ui/PhotoSlot.tsx`) avec une texture de marque en attendant.
-Pour les remplacer :
+8 photos réelles ont été récupérées depuis la catégorie **"Photos du propriétaire"**
+de la fiche Google Maps de SHALUC (contenu publié par le compte du restaurant
+lui-même — choix délibéré pour éviter de réutiliser des photos de clients/Local
+Guides sans autorisation claire). Elles sont dans `public/photos/` et référencées
+dans `src/lib/restaurant.ts` (export `photos`).
 
-1. Déposer les images dans `public/photos/`.
-2. Remplacer chaque `<PhotoSlot label="..." />` par `<Image src="/photos/xxx.jpg" ... />`.
+Une photo montrant des enfants clients a été écartée par respect de leur vie privée.
+
+`PhotoSlot` (`src/components/ui/PhotoSlot.tsx`) accepte un prop `src` optionnel :
+avec `src`, il affiche la vraie photo (via `next/image`) ; sans, il retombe sur la
+texture de marque placeholder. Pour ajouter d'autres photos officielles (menu,
+plats identifiés, équipe), déposez-les dans `public/photos/` et référencez-les de
+la même façon.
+
+⚠️ **Point à vérifier avec le restaurant** : le logo réel photographié sur place
+(`public/photos/logo-source.jpg`) affiche **"Shaluc — Flavour of Asia"** avec un
+pictogramme d'éléphant, ce qui diffère du nom "Taste of India" utilisé sur la
+fiche Google Maps et donc sur tout le site actuel. À confirmer avant mise en ligne :
+lequel des deux est le nom/la accroche officiels à utiliser.
 
 ## Structure
 

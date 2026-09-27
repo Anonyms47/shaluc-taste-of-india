@@ -1,5 +1,7 @@
-import { restaurant } from "@/lib/restaurant";
+import { restaurant, photos } from "@/lib/restaurant";
 import { PhotoSlot } from "../ui/PhotoSlot";
+
+const dishPhotos = [photos.assiette1, photos.assiette2];
 
 export function Cuisine() {
   return (
@@ -19,9 +21,14 @@ export function Cuisine() {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2">
-          {restaurant.popularDishes.map((dish) => (
+          {restaurant.popularDishes.map((dish, i) => (
             <article key={dish.name} className="group">
-              <PhotoSlot label={dish.name} aspect="aspect-[5/4]" alt={dish.name} />
+              <PhotoSlot
+                label={dish.name}
+                src={dishPhotos[i]}
+                aspect="aspect-[5/4]"
+                alt="Plat servi chez SHALUC"
+              />
               <div className="mt-4 flex items-start justify-between gap-4">
                 <h3 className="font-display text-2xl">{dish.name}</h3>
                 <span className="mt-1 shrink-0 rounded-full bg-ember/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-ember-soft">

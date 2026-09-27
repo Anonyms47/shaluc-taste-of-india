@@ -1,4 +1,4 @@
-import { restaurant } from "@/lib/restaurant";
+import { restaurant, photos } from "@/lib/restaurant";
 import { PhotoSlot } from "../ui/PhotoSlot";
 import { SpiceMark } from "../ui/SpiceMark";
 
@@ -33,8 +33,20 @@ export function Story() {
           </p>
         </div>
         <div className="grid grid-cols-2 gap-4">
-          <PhotoSlot label="Le tandoor" aspect="aspect-[3/4]" className="mt-8" />
-          <PhotoSlot label="En cuisine" aspect="aspect-[3/4]" variant="alt" />
+          <PhotoSlot
+            label="La salle, en journée"
+            src={photos.salleJour}
+            alt="La salle du restaurant SHALUC en journée"
+            aspect="aspect-[3/4]"
+            className="mt-8"
+          />
+          <PhotoSlot
+            label="Ambiance du soir"
+            src={photos.lumiereSoir}
+            alt="Détail d'une table du restaurant SHALUC, le soir"
+            aspect="aspect-[3/4]"
+            variant="alt"
+          />
         </div>
       </div>
     </section>

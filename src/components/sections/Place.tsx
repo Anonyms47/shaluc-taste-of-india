@@ -1,3 +1,4 @@
+import { photos } from "@/lib/restaurant";
 import { PhotoSlot } from "../ui/PhotoSlot";
 
 export function Place() {
@@ -10,11 +11,39 @@ export function Place() {
         </h2>
 
         <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
-          <PhotoSlot label="La salle" aspect="aspect-[3/4]" className="col-span-1 md:col-span-2 md:row-span-2 aspect-[3/4] md:aspect-square" />
-          <PhotoSlot label="Détail table" aspect="aspect-square" variant="alt" />
-          <PhotoSlot label="Lumière du soir" aspect="aspect-square" />
-          <PhotoSlot label="La cuisine" aspect="aspect-square" variant="alt" />
-          <PhotoSlot label="Façade" aspect="aspect-square" />
+          <PhotoSlot
+            label="La grande table"
+            src={photos.tableLongue}
+            alt="Grande table dressée chez SHALUC"
+            aspect="aspect-[3/4]"
+            className="col-span-1 md:col-span-2 md:row-span-2 aspect-[3/4] md:aspect-square"
+          />
+          <PhotoSlot
+            label="Jeu de miroirs"
+            src={photos.salleMiroir}
+            alt="Reflet de la salle du restaurant SHALUC"
+            aspect="aspect-square"
+            variant="alt"
+          />
+          <PhotoSlot
+            label="Lumière du soir"
+            src={photos.lumiereSoir}
+            alt="Détail d'une table du restaurant SHALUC, le soir"
+            aspect="aspect-square"
+          />
+          <PhotoSlot
+            label="En journée"
+            src={photos.salleJour}
+            alt="La salle du restaurant SHALUC en journée"
+            aspect="aspect-square"
+            variant="alt"
+          />
+          <PhotoSlot
+            label="La terrasse"
+            src={photos.terrasse}
+            alt="La terrasse extérieure du restaurant SHALUC"
+            aspect="aspect-square"
+          />
         </div>
       </div>
     </section>

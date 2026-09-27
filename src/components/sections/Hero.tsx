@@ -1,4 +1,4 @@
-import { restaurant, telUrl, mapsUrl } from "@/lib/restaurant";
+import { restaurant, telUrl, mapsUrl, photos } from "@/lib/restaurant";
 import { PhotoSlot } from "../ui/PhotoSlot";
 
 export function Hero() {
@@ -6,10 +6,13 @@ export function Hero() {
     <section id="accueil" className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink">
       <div className="absolute inset-0">
         <PhotoSlot
-          label="Photo à venir — plat signature ou salle SHALUC"
-          alt="Photographie du restaurant SHALUC (à venir)"
+          label="La salle SHALUC"
+          src={photos.salleSoir}
+          alt="La salle du restaurant SHALUC, le soir"
           aspect="aspect-auto h-full"
           className="h-full w-full"
+          priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/10" />
       </div>

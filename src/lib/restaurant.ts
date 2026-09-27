@@ -65,6 +65,20 @@ export const restaurant = {
   logo: null as string | null,
 } as const;
 
+// Photos réelles du restaurant, récupérées depuis la catégorie
+// "Photos du propriétaire" de sa fiche Google Maps (contenu publié par le
+// compte SHALUC Taste of India lui-même).
+export const photos = {
+  salleSoir: "/photos/salle-soir.jpg",
+  salleJour: "/photos/salle-jour.jpg",
+  salleMiroir: "/photos/salle-miroir.jpg",
+  tableLongue: "/photos/table-longue.jpg",
+  terrasse: "/photos/terrasse.jpg",
+  lumiereSoir: "/photos/lumiere-soir.jpg",
+  assiette1: "/photos/assiette-1.jpg",
+  assiette2: "/photos/assiette-2.jpg",
+} as const;
+
 export const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   restaurant.mapsQuery
 )}`;
